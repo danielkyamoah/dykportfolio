@@ -15,12 +15,29 @@
     <header>
       <div class="container nav">
         <a href="#top" class="brand">DYK</a>
+
         <nav class="nav-links" aria-label="Main navigation">
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
+
+          <div class="theme-switcher" aria-label="Theme switcher">
+            <button class="theme-btn" data-theme="light" type="button">
+              Light
+            </button>
+            <button class="theme-btn" data-theme="dark" type="button">
+              Dark
+            </button>
+            <button class="theme-btn" data-theme="system" type="button">
+              System
+            </button>
+          </div>
         </nav>
-        <button class="hamburger-menu">
+        <button
+          class="hamburger-menu"
+          aria-label="Toggle navigation menu"
+          type="button"
+        >
           <span class="bar 1"></span>
           <span class="bar 2"></span>
           <span class="bar 3"></span>
@@ -181,13 +198,20 @@
 
     <!-- ===== Footer ===== -->
     <footer>
-      <div class="container">
-        © <span id="year"></span> Daniel Kofi Yamoah. All rights reserved.
+      <div class="container footer-inner">
+        <div class="footer-copy">
+          © <span id="year"></span> Daniel Kofi Yamoah. All rights reserved.
+        </div>
+
+        <div class="social-links" aria-label="Social media links">
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="X">X</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="GitHub">◌</a>
+        </div>
       </div>
     </footer>
 
-    <script src="index.js">
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
