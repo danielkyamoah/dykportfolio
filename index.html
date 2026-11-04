@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel Kyamoah | Portfolio</title>
+    <meta
+      name="description"
+      content="A simplified portfolio website for Daniel Kyamoah."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ===== Header ===== -->
+    <header>
+      <div class="container nav">
+        <a href="#top" class="brand">DYK</a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="hamburger-menu">
+          <span class="bar 1"></span>
+          <span class="bar 2"></span>
+          <span class="bar 3"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ===== Hero section ===== -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="eyebrow">Portfolio</span>
+            <h1>Building simple digital experiences.</h1>
+            <p class="lead">
+              I’m Daniel, a designer and developer focused on creating polished,
+              user-centered websites and products that feel clear, modern, and
+              engaging.
+            </p>
+            <div class="cta-row">
+              <a href="#projects" class="button">View Work</a>
+              <a href="#contact" class="button secondary">Let’s Talk</a>
+            </div>
+          </div>
+
+          <div class="profile-card">
+            <div class="avatar" aria-label="Profile illustration">✦</div>
+            <div class="mini-label">Currently</div>
+            <strong>Available for freelance &amp; collaborations</strong>
+
+            <div class="stats">
+              <div class="stat">
+                <strong>3+</strong>
+                Years
+              </div>
+              <div class="stat">
+                <strong>12</strong>
+                Projects
+              </div>
+              <div class="stat">
+                <strong>100%</strong>
+                Focused
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== About section ===== -->
+      <section id="about">
+        <div class="container">
+          <div class="section-header">
+            <h2>About me</h2>
+            <p>
+              I design and build thoughtful digital experiences with a strong
+              emphasis on clarity, usability, and visual polish.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <div class="card about-copy">
+              I enjoy turning ideas into clean, practical interfaces that help
+              brands stand out and users feel at ease. My work blends design
+              thinking, front-end development, and a careful eye for user
+              experience.
+              <br /><br />
+              Whether it is a landing page, portfolio, or product interface, I
+              aim to make each experience feel easy, intentional, and memorable.
+            </div>
+
+            <div class="card">
+              <div class="mini-label">Skills</div>
+              <div class="tag-list">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">UI Design</span>
+                <span class="tag">Responsive Layouts</span>
+                <span class="tag">Branding</span>
+                <span class="tag">Figma</span>
+                <span class="tag">UX Thinking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Projects section ===== -->
+      <section id="projects">
+        <div class="container">
+          <div class="section-header">
+            <h2>Selected work</h2>
+            <p>
+              A few examples of projects shaped around clarity, simplicity, and
+              strong user value.
+            </p>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-visual">📦</div>
+              <h3>Brand Launch</h3>
+              <p>
+                Landing page concept for a new product with clean messaging and
+                conversion-focused design.
+              </p>
+              <div class="project-meta">
+                <span>UI/UX</span>
+                <span>2025</span>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-visual">📊</div>
+              <h3>Analytics Dashboard</h3>
+              <p>
+                Clean dashboard system that made complex data easier to read and
+                act on.
+              </p>
+              <div class="project-meta">
+                <span>Web App</span>
+                <span>2024</span>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-visual">🌐</div>
+              <h3>Portfolio Redesign</h3>
+              <p>
+                Minimal portfolio refresh focused on elegant presentation and
+                smoother storytelling.
+              </p>
+              <div class="project-meta">
+                <span>Design</span>
+                <span>2024</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Contact section ===== -->
+      <section id="contact">
+        <div class="container">
+          <div class="contact-box">
+            <h2>Let’s build something meaningful.</h2>
+            <p>
+              I’m available for creative collaborations, portfolio work, and
+              digital experiences that deserve a strong first impression.
+            </p>
+            <a href="mailto:hello@dnnkofi@gmail.com" class="button"
+              >hello Daniel</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+      <div class="container">
+        © <span id="year"></span> Daniel Kofi Yamoah. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="index.js">
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
