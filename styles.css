@@ -95,6 +95,7 @@ header {
 .theme-switcher {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   padding: 4px;
   border: 1px solid var(--line);
@@ -102,17 +103,51 @@ header {
   border-radius: 999px;
 }
 
+.theme-toggle,
 .theme-btn {
   border: 0;
   background: transparent;
   color: var(--muted);
   font: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.theme-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-1px);
+}
+
+@media (min-width: 769px) {
+  .theme-btn {
+    display: none;
+  }
+
+  .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.theme-btn {
   font-size: 0.72rem;
   font-weight: 700;
   padding: 0.4rem 0.7rem;
   border-radius: 999px;
-  cursor: pointer;
-  transition: all 0.2s ease;
 }
 
 .theme-btn.is-active {
@@ -237,6 +272,20 @@ header {
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: eyebrowDrop 0.7s ease forwards 1s;
+}
+
+@keyframes eyebrowDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 h1 {
@@ -536,6 +585,14 @@ footer {
     justify-content: flex-start;
   }
 
+  .theme-toggle {
+    display: none;
+  }
+
+  .theme-btn {
+    display: inline-flex;
+  }
+
   .nav-links a {
     width: auto;
     padding: 0;
@@ -556,6 +613,18 @@ footer {
     border: 1px solid var(--line);
     border-radius: 12px;
     box-shadow: 0 8px 18px rgba(15, 23, 42, 0.05);
+  }
+
+  .hamburger-menu.is-open .bar:nth-child(1) {
+    transform: translateY(5px) rotate(45deg);
+  }
+
+  .hamburger-menu.is-open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.is-open .bar:nth-child(3) {
+    transform: translateY(-5px) rotate(-45deg);
   }
 
   .bar {
