@@ -161,14 +161,21 @@ header {
   letter-spacing: 0.08em;
   color: var(--ink);
   text-transform: uppercase;
-  transition:
-    opacity 0.2s ease,
-    transform 0.2s ease;
+  opacity: 0;
+  transform: translateY(-12px);
+  animation: brandDrop 0.45s ease forwards 1.15s;
 }
 
-.brand:hover {
-  opacity: 0.82;
-  transform: translateY(-1px);
+@keyframes brandDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .nav-links {
@@ -295,7 +302,7 @@ h1 {
   letter-spacing: -0.06em;
   opacity: 0;
   transform: translateX(-40px);
-  animation: h1SlideIn 0.8s ease forwards 1.15s;
+  animation: h1SlideIn 0.5s ease forwards 1.15s;
 }
 
 @keyframes h1SlideIn {
