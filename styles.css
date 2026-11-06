@@ -293,6 +293,20 @@ h1 {
   line-height: 1.05;
   margin: 18px 0 16px;
   letter-spacing: -0.06em;
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: h1SlideIn 0.8s ease forwards 1.15s;
+}
+
+@keyframes h1SlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .lead {
